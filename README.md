@@ -34,7 +34,7 @@ Final scores, i.e. mean test RMSE/Accuracy and standard deviation, can be found 
 
 ## Code Contributors
 
-[Ajaykrishna Karthikeyan](https://github.com/ajay0)
+[Ajaykrishna Karthikeyan](https://github.com/ajay0)  
 [Naman Jain](https://github.com/Naman-ntc)
 
 ## Contributing
