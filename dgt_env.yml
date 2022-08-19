@@ -1,0 +1,20 @@
+name: dgt_env
+channels:
+  - pytorch
+  - etetoolkit
+dependencies:
+  - python=3.6.8
+  - pytorch=1.7.0
+  - torchvision=0.8.1
+  - ete3
+  - ete_toolchain
+  - pyqt
+  - pip
+  - pip:
+    - matplotlib
+    - numpy
+    - pandas
+    - sklearn
+    - scipy
+    - vowpalwabbit
+    - requests

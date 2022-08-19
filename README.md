@@ -1,33 +1,44 @@
-# Project
+## Paper
+[Learning Accurate Decision Trees with Bandit Feedback via Quantized Gradient Descent](https://arxiv.org/abs/2102.07567)
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+## Setup
 
-As the maintainer of this project, please make a few updates:
+1. Install necessary packages
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+Create a new conda environment named `dgt_env` with `python==3.6.8`, `pytorch==1.7.0` and install all dependencies inside:
+
+```
+$ conda env create -f dgt_env.yml
+$ conda activate dgt_env
+```
+
+2. Change working directory to `src`:
+
+```
+$ cd src
+```
+
+3. Run the algorithm
+
+To reproduce some of our results, please run `bash run.sh`.
+- The script by default runs our algorithm with height 6 on `ailerons`. Commands for `abalone`, `satimage`, and `pendigits` are commented out.
+- To change height of the tree learnt, change the argument corresponding to `--height` flag.
+- The `--proc_per_gpu` option denotes how many processes to run per GPU. It defaults to 4 which is ideal for a typical GPU but on a GPU with small memory, reducing it from 4 might be required.
+- The `--num_gpu` option denotes how many GPUs to parallelize over (and assumes device ordinal of GPUs start with 0). It defaults to 1.
+
+Note: For `abalone` dataset we report the final performance across 5 different shuffles.
+
+4. Check Results
+
+Final scores, i.e. mean test RMSE/Accuracy and standard deviation, can be found in the file `./out/exp@{dataset}_{height}@{start_time}/meanstd-exps/meanstd-run-summary.csv` under the columns `test_acc_mean` and `test_acc_std`.
+
+## Code Contributors
+
+[Ajaykrishna Karthikeyan](https://github.com/ajay0)
+[Naman Jain](https://github.com/Naman-ntc)
 
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Trademarks
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
