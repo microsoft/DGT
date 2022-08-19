@@ -1,0 +1,21 @@
+{
+    "pdbbind":  { "n_features": 2052, "n_classes": -1 },
+    "abalone":  { "n_features": 10,   "n_classes": -1 },
+    "cpuactiv": { "n_features": 21,   "n_classes": -1 },
+    "ailerons": { "n_features": 40,   "n_classes": -1 },
+    "ctslice":  { "n_features": 384,  "n_classes": -1 },
+    "year":     { "n_features": 90,   "n_classes": -1 },
+    "mic":      { "n_features": 136,  "n_classes": -1 },
+    "yah":      { "n_features": 699,  "n_classes": -1 },
+
+    "connect-4":       { "n_features": 126,  "n_classes": 3  },
+    "mnist":           { "n_features": 780,  "n_classes": 10 },
+    "protein":         { "n_features": 357,  "n_classes": 3  },
+    "sensit-combined": { "n_features": 100,  "n_classes": 3  },
+    "letter":          { "n_features": 16,   "n_classes": 26 },
+    "pendigits":       { "n_features": 16,   "n_classes": 10 },
+    "satimage":        { "n_features": 36,   "n_classes": 6  },
+    "segment":         { "n_features": 19,   "n_classes": 7  },
+    "bace":            { "n_features": 2048, "n_classes": 2  },
+    "hiv":             { "n_features": 2048, "n_classes": 2  }
+}
