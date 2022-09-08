@@ -1,5 +1,7 @@
-## Paper
-[Learning Accurate Decision Trees with Bandit Feedback via Quantized Gradient Descent](https://arxiv.org/abs/2102.07567)
+## Dense Gradient Tree
+This repository houses the supporting code for the paper [Learning Accurate Decision Trees with Bandit Feedback via Quantized Gradient Descent](https://arxiv.org/abs/2102.07567). 
+
+The Dense Gradient Tree(DGT) technique supports learning decision trees of a given height for (a) multi-class classification, (b) regression settings, with both (a) standard supervised, and (b) bandit feedback. In the bandit feedback setting, the true loss function is unknown to the learning algorithm; the learner can only query the loss for a given prediction. The goal then is to learn decision trees in an online manner, where at each round the learner maintains a tree model, makes prediction for the presented features, receives a loss, and updates the tree model.
 
 ## Setup
 
